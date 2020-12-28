@@ -1,5 +1,5 @@
 % clc, clear all; close all;
-
+load fisheriris;
 dataset=meas; 
 res= species;
 result=zeros(150,1);
