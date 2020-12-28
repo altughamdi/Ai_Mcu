@@ -1,0 +1,33 @@
+13:17:32 **** Incremental Build of configuration Debug for project Ai_example ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../X-CUBE-AI/App -I../Middlewares/ST/AI/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:174:56: warning: ' | 
+
+   ' directive writing 5 bytes into a region of size between 0 and 3 [-Wformat-overflow=]
+      buf_len = sprintf(buf, "Input: %f , %f , %f, %f | \r\n",
+                                                     ~~~^~~~
+../Core/Src/main.c:174:14: note: 'sprintf' output between 53 and 1289 bytes into a destination of size 50
+      buf_len = sprintf(buf, "Input: %f , %f , %f, %f | \r\n",
+      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          ((ai_float*) in_data)[0], ((ai_float*) in_data)[1],
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          ((ai_float*) in_data)[2], ((ai_float*) in_data)[3]);
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Ai_example.elf" @"objects.list"  -l:NetworkRuntime520_CM4_GCC.a -mcpu=cortex-m4 -T"C:\Users\Altug\Desktop\Ai_in_Mcu\Ai_example\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ai_example.map" -Wl,--gc-sections -static -L../Middlewares/ST/AI/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Ai_example.elf
+ 
+arm-none-eabi-objdump -h -S  Ai_example.elf  > "Ai_example.list"
+arm-none-eabi-objcopy  -O binary  Ai_example.elf  "Ai_example.bin"
+arm-none-eabi-size   Ai_example.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34684	   3092	   2836	  40612	   9ea4	Ai_example.elf
+Finished building: default.size.stdout
+Finished building: Ai_example.bin
+ 
+ 
+Finished building: Ai_example.list
+ 
+
+13:17:34 Build Finished. 0 errors, 1 warnings. (took 2s.703ms)
+

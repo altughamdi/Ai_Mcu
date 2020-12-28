@@ -1,0 +1,21 @@
+!SESSION 2020-12-28 12:52:08.078 -----------------------------------------------
+eclipse.buildId=Version 1.4.0
+java.version=1.8.0_252
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-12-28 12:52:36.835
+!MESSAGE Log4j initialized with config file C:\Users\Altug\Desktop\Ai_in_Mcu\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-12-28 12:52:46.462
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-12-28 12:53:00.696
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-12-28 12:54:25.618
+!MESSAGE Indexed 'Ai_example' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-12-28 12:54:35.124
+!MESSAGE Indexed 'Ai_example' (25 sources, 82 headers) in 4.77 sec: 4,480 declarations; 20,819 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
